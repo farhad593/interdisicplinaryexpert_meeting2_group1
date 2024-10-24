@@ -1,6 +1,10 @@
+
+
 Virtual Art Showcase - Project Plan
 Project Overview
 The goal of this project is to create a simple, user-friendly platform where team members can showcase their artwork. The platform will allow friends, family, and visitors to easily navigate and view the artwork in an organized virtual space. Each artist will have a dedicated section for their work, biography, and descriptions of their creative process.
+
+LINK TO THE PROJECT MANAGEMENT PLATFORM TRELLO: https://trello.com/invite/b/671a44e190118b8e3d9e8482/ATTIa128673e2e398e69333932081476bd1305F4875E/project-visual-art-showcase
 
 Project Objectives
 Create a simple website or presentation platform to showcase the artwork of all team members.
