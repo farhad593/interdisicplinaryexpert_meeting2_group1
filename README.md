@@ -1,89 +1,72 @@
-Project Plan: Virtual Art Showcase
-1. Project Overview
-
+Virtual Art Showcase - Project Plan
+Project Overview
 The goal of this project is to create a simple, user-friendly platform where team members can showcase their artwork. The platform will allow friends, family, and visitors to easily navigate and view the artwork in an organized virtual space. Each artist will have a dedicated section for their work, biography, and descriptions of their creative process.
 
-2. Project Objectives
+Project Objectives
+Create a simple website or presentation platform to showcase the artwork of all team members.
+Provide individual sections for each artist, including an art description and biography.
+Ensure the platform is accessible and user-friendly for both artists and visitors, making it easy to navigate.
 
-    Create a simple website or presentation platform to showcase the artwork of all team members.
-    Provide individual sections for each artist, including an art description and biography.
-    Keep the platform easily accessible and user-friendly for both artists and visitors, ensuring it is easy to navigate.
-
-3. Project Scope
-
+Project Scope
 The website will serve as an online gallery where users can browse the artwork, read about each artist, and learn about their creative process.
 
-The scope of the project will depend on the tools and technology chosen. We are considering two possible approaches:
+Technology Stack Options:
 
-  Simple Tech Stack: Using drag-and-drop website builders (e.g., Wix or WordPress), which will allow for quicker deployment and simpler management.
+More Advanced Tech Stack
 
-  More Advanced Tech Stack: If we choose to use custom code, we may explore building a static site using tools like HTML/CSS/JavaScript or a simple web framework like Bootstrap for easier design and layout customization. 
-  This approach will require a bit more development work but will offer more flexibility in terms of design and functionality.
+Frontend: HTML, CSS, and JavaScript with a framework like Bootstrap for responsive design.
+Hosting: Static website hosting services like GitHub Pages or Netlify.
+Version Control: GitHub for managing project code and collaboration.
+Simple Tech Stack (Less Advanced)
 
-4. Technology Stack
+Website Builder: Wix or WordPress, providing a drag-and-drop interface for easy website creation.
+Image Hosting: Direct uploads to the website builder or Google Drive for larger file management.
+Feedback System: Use of Google Forms or built-in comment features on Wix/WordPress.
 
-Given the team's skill level, we are still deciding between two approaches, each with its own advantages:
+Methodology: Scrum
 
-Option 1: More Advanced Tech Stack
+We will use the Scrum methodology to organize our project. This will allow us to work iteratively, delivering incremental progress through short, focused work periods called sprints. Each sprint will last two weeks and will culminate in a review and planning session to prepare for the next sprint.
 
-  Frontend: HTML, CSS, and JavaScript with a framework like Bootstrap to ensure responsive design.
-  Hosting: Static website hosting services like GitHub Pages or Netlify.
-  Version Control: GitHub for managing project code and collaboration.
+Scrum Roles
+Product Owner: Responsible for defining the project vision, goals, and requirements. Also prioritizes tasks.
+Scrum Master: Ensures the team follows Scrum practices, facilitates meetings, and removes obstacles.
+Development Team: Responsible for executing tasks and delivering project increments.
 
-Option 2: Simple Tech Stack (Less Advanced)
+Product Backlog
+The product backlog includes all the tasks needed to complete the project. The team will prioritize these tasks and select a manageable set for each sprint. Example tasks include:
 
-   Website Builder: Wix or WordPress. These platforms offer drag-and-drop interfaces that allow for easy website creation without the need for coding.
-   Image Hosting: Direct uploads to the website builder or Google Drive for larger file management.
-   Feedback System: Use of Google Forms or the built-in comment feature provided by Wix/WordPress.
+Setting up the GitHub repository
+Designing the homepage layout
+Uploading artwork and biographies
+Implementing responsive design features
+Testing and debugging the website
+Preparing the final presentation
+Sprints & Timeline
+Sprint	Timeline	Objectives
+Sprint 1	Weeks 1-2	Project setup: Create GitHub repository, assign roles, define project structure
+Sprint 2	Weeks 2-3	Design homepage layout using HTML/CSS/Bootstrap
+Sprint 3	Weeks 3-4	Develop artist pages and implement navigation
+Sprint 4	Weeks 4-5	Upload content: artwork, biographies, and adjust page layouts for consistency
+Sprint 5	Weeks 5-7	Implement interactivity, ensure responsiveness, and conduct user experience testing
+Sprint 6	Weeks 7-8	Finalize design, deploy the website, write documentation, and prepare the final presentation
 
-5. Milestones & Timeline
+Daily Stand-ups
+Each day, the team will conduct a short, 15-minute meeting (stand-up) where each member shares:
 
-The project will be broken into key phases to ensure a smooth development process using the more advanced tech stack. Here's the timeline with estimated completion dates for each phase:
-Week 1: Project Setup
+What they did yesterday
+What they plan to do today
+Any blockers or issues they are facing
+Sprint Review & Retrospective
+At the end of each sprint, we will hold two meetings:
 
-Milestone 1: Initial Setup
-    Create GitHub Repository: Set up a GitHub repository for version control and collaboration.
-    Define Project Structure: Create the initial folder structure for the website (e.g., HTML, CSS, and JavaScript files).
-    Assign Roles & Responsibilities: Each team member will be assigned a specific role (e.g., frontend design, content writing, etc.).
+Sprint Review: Demonstrate the completed work to the team and any stakeholders. Gather feedback to incorporate into the next sprint.
+Sprint Retrospective: Reflect on the team's performance, discuss what went well, what can be improved, and any changes for the next sprint.
+Technology Stack Decision
+We are considering two approaches based on the team's skill level and project requirements:
 
+Advanced Approach: Use HTML, CSS, and JavaScript with Bootstrap for a custom-built, responsive website.
+Simple Approach: Use a drag-and-drop website builder (Wix or WordPress) for quicker deployment with less coding effort.
+The final decision will be based on the team's comfort level with coding and the desired level of customization.
 
-Week 2-3: Frontend Design
-
-Milestone 2: Design the Website Layout Using HTML/CSS/Bootstrap
-
-  Set Up the Basic Layout: Create a responsive homepage and internal pages using HTML and Bootstrap.
-   Design Artist Pages: Each artist will have a dedicated page with sections for artwork, biography, and creative process description.
-  Define Navigation: Implement easy-to-use navigation so visitors can seamlessly move between artist pages.
-
-
-Week 3-5: Adding Content
-
-Milestone 3: Populate Website with Content
-    Upload Artwork: Collect and upload images for each artist’s gallery section.
-    Add Biographies and Art Descriptions: Write and upload artist bios and descriptions of each piece.
-    Finalize Page Layouts: Adjust the layouts of the artist pages for a consistent look and feel.
-
-
-Week 5-7: Interactivity and Testing
-
-Milestone 4: Implement Basic Interactivity & Test
-
-   Add Responsive Features: Ensure that the website is fully responsive across different devices (mobile, tablet, desktop).
-    Test User Experience: Test the website for user experience (UX), making sure it’s easy to navigate and content loads properly.
-    Debugging: Fix any issues that arise during testing (e.g., broken links, layout issues).
-
-
-Week 8: Final Touches & Hosting
-
-Milestone 5: Finalize and Deploy the Website
-
-   Finalize Design: Apply any final adjustments to design, layout, or content based on test feedback.
-    Deploy Website: Deploy the website using GitHub Pages or Netlify for hosting.
-    Documentation: Write and upload technical documentation on GitHub, explaining the website's structure, technologies used, and how to maintain/update it.
-
-
-Week 8: Presentation Preparation
-
-Milestone 6: Prepare Final Presentation
-
-  Create a Slide Deck: Prepare a presentation that includes an overview of the project, the process, key features of the website, and a live demo.
+Conclusion
+By following the Scrum methodology, we aim to ensure a structured yet flexible approach to building our Virtual Art Showcase. Through regular iterations and feedback, we will deliver a polished, user-friendly platform where our artwork can be appreciated by a wide audience.
