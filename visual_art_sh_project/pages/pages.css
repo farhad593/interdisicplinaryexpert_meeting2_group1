@@ -1,0 +1,214 @@
+/* Page Content */
+.page-content {
+    padding-top: 100px;
+    min-height: calc(100vh - 200px);
+    background-color: #121212;
+}
+
+/* Search Section */
+.search-section {
+    text-align: center;
+    padding: 2rem;
+    margin-bottom: 3rem;
+}
+
+.search-section h1 {
+    color: #fff;
+    font-size: 2.8rem;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.search-container input {
+    width: 100%;
+    padding: 1rem 3rem 1rem 1.5rem;
+    font-size: 1.1rem;
+    border: 2px solid #D4AF37;
+    border-radius: 25px;
+    background: rgba(26, 26, 26, 0.8);
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.search-container input:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+    background: rgba(26, 26, 26, 0.95);
+}
+
+.search-container .search-icon {
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #D4AF37;
+    font-size: 1.2rem;
+}
+
+/* Exhibitions Grid */
+.exhibitions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.exhibition-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+.exhibition-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.exhibition-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.exhibition-card:hover img {
+    transform: scale(1.05);
+}
+
+.exhibition-info {
+    padding: 1.5rem;
+}
+
+.exhibition-info h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 0.8rem;
+}
+
+.exhibition-info .location {
+    color: #D4AF37;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+.exhibition-info .location i {
+    margin-right: 0.5rem;
+}
+
+.exhibition-info .date {
+    color: #bdbdbd;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.exhibition-info .description {
+    color: #e0e0e0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Artists Grid */
+.artists-discover-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    padding: 0 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.artist-discover-card {
+    background: #1a1a1a;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.artist-discover-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.2);
+}
+
+.artist-discover-card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.artist-discover-card:hover img {
+    transform: scale(1.05);
+}
+
+.artist-discover-info {
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.artist-discover-info h3 {
+    color: #fff;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+.artist-discover-info .specialty {
+    color: #D4AF37;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.artist-discover-info .bio {
+    color: #e0e0e0;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .exhibitions-grid,
+    .artists-discover-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .exhibitions-grid,
+    .artists-discover-grid {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .search-section h1 {
+        font-size: 2rem;
+    }
+
+    .search-container input {
+        font-size: 1rem;
+        padding: 0.8rem 2.5rem 0.8rem 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .exhibition-card img,
+    .artist-discover-card img {
+        height: 200px;
+    }
+
+    .exhibition-info h3,
+    .artist-discover-info h3 {
+        font-size: 1.2rem;
+    }
+} 

@@ -1,0 +1,995 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #1a1a1a;
+    background-color: #ffffff;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #1a1a1a;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #1a1a1a;
+    margin-left: 2.5rem;
+    padding: 0.5rem;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #E91E63;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #ffffff;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: #1a1a1a;
+}
+
+.hero p {
+    font-size: 1.4rem;
+    color: #4a4a4a;
+}
+
+/* Hero Buttons */
+.hero-buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #E91E63;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    border: 2px solid #E91E63;
+}
+
+.hero-button:hover {
+    background-color: #C2185B;
+    border-color: #C2185B;
+    transform: translateY(-2px);
+}
+
+.hero-button.secondary {
+    background-color: transparent;
+    color: #E91E63;
+    border: 2px solid #E91E63;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-button.secondary:hover {
+    color: white;
+    background-color: transparent;
+    border-color: #E91E63;
+    transform: translateY(-2px);
+}
+
+.hero-button.secondary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #E91E63;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.hero-button.secondary:hover::before {
+    width: 100%;
+}
+
+/* Featured Exhibitions Section */
+.featured-exhibitions {
+    padding: 8rem 2rem;
+    background-color: #ffffff;
+}
+
+.featured-exhibitions h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 3rem;
+    padding-left: 4rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.featured-slider {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.exhibition-slide {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.exhibition-slide:hover {
+    transform: translateY(-8px);
+}
+
+.exhibition-slide img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.exhibition-info {
+    padding: 1.5rem 1.8rem;
+}
+
+.exhibition-info h3 {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.exhibition-info .location {
+    color: #4a4a4a;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.exhibition-info .date {
+    color: #4a4a4a;
+    font-size: 1rem;
+}
+
+/* Discover Exhibitions Section */
+.discover-exhibitions {
+    padding: 8rem 2rem;
+    background-color: #f0f4ff;
+}
+
+.discover-exhibitions-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.discover-exhibitions .text-content {
+    flex: 1;
+    text-align: right;
+    padding-right: 2rem;
+}
+
+.discover-exhibitions h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    line-height: 1.2;
+}
+
+.discover-exhibitions .image-content {
+    flex: 1;
+}
+
+.discover-exhibitions img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Artists Section */
+.artists-section {
+    padding: 8rem 2rem;
+    background-color: #fff1f6;
+}
+
+.artists-section h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #1a1a1a;
+    font-size: 2.5rem;
+}
+
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.artist-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+}
+
+.artist-card h3 {
+    color: #333;
+    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.artist-card .artist-specialty {
+    color: #E91E63;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.artist-card .artist-bio {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.view-portfolio {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #E91E63;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.view-portfolio:hover {
+    background-color: #D81B60;
+    transform: translateY(-2px);
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 8rem 2rem;
+    background-color: #f0f4ff;
+}
+
+.testimonials h2 {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #1a1a1a;
+    font-size: 2.5rem;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.testimonial {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.testimonial .quote {
+    font-size: 1.1rem;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.testimonial .author {
+    color: #E91E63;
+    font-weight: 500;
+}
+
+/* Footer */
+footer {
+    background-color: #ffffff;
+    color: #4a4a4a;
+    padding: 3rem 2rem;
+    text-align: center;
+    border-top: 1px solid #f0f0f0;
+}
+
+.social-links a {
+    color: #1a1a1a;
+    font-size: 1.8rem;
+    margin: 0 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #E91E63;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+    .featured-slider {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .featured-slider {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .artists-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .discover-exhibitions-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .discover-exhibitions .text-content {
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .featured-slider {
+        grid-template-columns: 1fr;
+    }
+    
+    .artists-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .testimonials-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Artist Portfolio Pages */
+.artist-portfolio {
+    padding-top: 80px;
+    background-color: #ffffff;
+}
+
+.artist-profile {
+    background-color: #f0f4ff;
+    padding: 6rem 2rem;
+}
+
+.artist-profile-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.artist-image {
+    flex: 1;
+}
+
+.artist-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.artist-info {
+    flex: 1;
+}
+
+.artist-info h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.artist-info .specialty {
+    font-size: 1.4rem;
+    color: #E91E63;
+    margin-bottom: 2rem;
+}
+
+.artist-details {
+    background-color: #ffffff;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.detail-item {
+    margin-bottom: 2rem;
+}
+
+.detail-item:last-child {
+    margin-bottom: 0;
+}
+
+.detail-item h3 {
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+}
+
+.artist-works {
+    background-color: #fff1f6;
+    padding: 6rem 2rem;
+}
+
+.artist-works h2 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin-bottom: 3rem;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4rem;
+}
+
+.artwork-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.artwork-item {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.artwork-item:hover {
+    transform: translateY(-8px);
+}
+
+.artwork-item img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.artwork-details {
+    padding: 1.8rem;
+}
+
+.artwork-details h3 {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+}
+
+.artwork-details .medium {
+    color: #E91E63;
+    font-size: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+.artwork-details .description {
+    color: #4a4a4a;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Discover Artists Page */
+.discover-content {
+    padding-top: 80px;
+    background-color: #ffffff;
+}
+
+.search-section {
+    background-color: #f0f4ff;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.search-section h1 {
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+}
+
+.search-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 1.2rem 2rem;
+    padding-right: 4rem;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+}
+
+.search-input::placeholder {
+    color: #888888;
+}
+
+.search-input:focus {
+    outline: none;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Add a search icon */
+.search-container::after {
+    content: '🔍';
+    position: absolute;
+    right: 1.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #E91E63;
+    font-size: 1.2rem;
+}
+
+.artists-discover-grid {
+    background-color: #fff1f6;
+    padding: 6rem 2rem;
+}
+
+.artists-discover-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+/* Artist Cards in Discover Grid */
+.artists-discover-content .artist-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    padding: 2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.artists-discover-content .artist-card:hover {
+    transform: translateY(-8px);
+}
+
+.artists-discover-content .artist-card h3 {
+    font-size: 2rem;
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+}
+
+.artists-discover-content .artist-card .artist-specialty {
+    color: #E91E63;
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.artists-discover-content .artist-card .artist-bio {
+    color: #4a4a4a;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* Links in Artist Cards */
+.artists-discover-content .artist-card .view-portfolio {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #E91E63;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    margin-top: 1rem;
+}
+
+.artists-discover-content .artist-card .view-portfolio:hover {
+    background-color: #D81B60;
+    transform: translateY(-2px);
+}
+
+/* Exhibitions Page */
+.exhibitions-header {
+    background-color: #f0f4ff;
+    padding: 6rem 2rem;
+    text-align: center;
+}
+
+.exhibitions-header h1 {
+    font-size: 3rem;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+}
+
+.exhibitions-content {
+    background-color: #fff1f6;
+    padding: 6rem 2rem;
+}
+
+.exhibitions-grid {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.exhibition-card {
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease;
+}
+
+.exhibition-card:hover {
+    transform: translateY(-8px);
+}
+
+.exhibition-card img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+}
+
+.exhibition-card-info {
+    padding: 1.8rem;
+}
+
+.exhibition-card-info h3 {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.exhibition-card-info .location {
+    color: #4a4a4a;
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+}
+
+.exhibition-card-info .date {
+    color: #4a4a4a;
+    font-size: 1rem;
+}
+
+/* Card Styles for Artists and Exhibitions */
+.card {
+    background: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Common Button Styles */
+.button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #E91E63;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #C2185B;
+    transform: translateY(-2px);
+}
+
+.button.secondary {
+    background-color: transparent;
+    border: 2px solid #E91E63;
+    color: #E91E63;
+}
+
+.button.secondary:hover {
+    background-color: #E91E63;
+    color: white;
+}
+
+/* Discover More Button Container */
+.discover-more {
+    text-align: right;
+    margin-top: 6rem;
+    padding-right: 4rem;
+}
+
+.discover-more .hero-button {
+    min-width: 200px;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+    .artwork-grid,
+    .exhibitions-grid,
+    .artists-discover-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 992px) {
+    .artist-profile-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .artist-info {
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    .artwork-grid,
+    .exhibitions-grid,
+    .artists-discover-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .artist-profile-content {
+        gap: 2rem;
+    }
+    
+    .artist-works h2,
+    .exhibitions-header h1,
+    .search-section h1 {
+        font-size: 2rem;
+        padding-left: 0;
+    }
+    
+    .search-container {
+        padding: 0 1rem;
+    }
+}
+
+/* Artist Profile Page - New Design */
+.profile-banner {
+    background-color: #f0f4ff;
+    padding: 4rem 2rem;
+    margin-top: 80px;
+}
+
+.profile-header {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.artist-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.artist-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.artist-headline {
+    flex: 1;
+}
+
+.artist-headline h1 {
+    font-size: 3.5rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.artist-headline .specialty {
+    font-size: 1.5rem;
+    color: #E91E63;
+    margin-bottom: 1.5rem;
+}
+
+.artist-headline .social-links {
+    margin-top: 2rem;
+}
+
+.artist-headline .social-links a {
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    color: #1a1a1a;
+    transition: color 0.3s ease;
+}
+
+.artist-headline .social-links a:hover {
+    color: #E91E63;
+}
+
+.artist-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+}
+
+.artist-bio {
+    background: #ffffff;
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08);
+}
+
+.bio-section {
+    margin-bottom: 2.5rem;
+}
+
+.bio-section:last-child {
+    margin-bottom: 0;
+}
+
+.bio-section h3 {
+    font-size: 1.4rem;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+}
+
+.bio-section p {
+    color: #4a4a4a;
+    line-height: 1.8;
+    font-size: 1.1rem;
+}
+
+.bio-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.bio-section ul li {
+    color: #4a4a4a;
+    line-height: 1.8;
+    font-size: 1.1rem;
+    margin-bottom: 0.8rem;
+}
+
+.bio-section ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive Design for New Profile Layout */
+@media (max-width: 992px) {
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .artist-headline .social-links {
+        justify-content: center;
+    }
+
+    .artist-bio {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .profile-banner {
+        padding: 3rem 1rem;
+    }
+
+    .artist-headline h1 {
+        font-size: 2.5rem;
+    }
+
+    .artist-headline .specialty {
+        font-size: 1.2rem;
+    }
+
+    .artist-content {
+        padding: 2rem 1rem;
+    }
+} 
